@@ -1,22 +1,101 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h3 class="vreme-naslov">Vreme</h3>
-    <div class="card vreme" style="width: 18rem;">
-        <div class="card-header">
-        Prnjavor
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Trenutna temperatura: {{ temp }}&#8451 </li>
-            <li class="list-group-item">Subjektivni osecaj: {{ feels_like}}&#8451</li>
-            <li class="list-group-item">{{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></li>
-            <li class="list-group-item">Brzina vetra: {{ vetar }} m/s</li>
-            <li class="list-group-item">Vlaznost vazduha: {{ vlaznost }}%</li>
-            <li class="list-group-item">Sunce izlazi: {{ izlazak_sunca }}h</li>
-            <li class="list-group-item">Sunce zalazi: {{ zalazak_sunca }}h</li>
 
-        </ul>
+
+
+<!--    <div class="slika-temp">-->
+<!--        <div class="slika">-->
+<!--            <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>-->
+<!--            <div>{{ opis }}</div>-->
+<!--        </div>-->
+<!--        <div class="temp">-->
+<!--            <div class="tren">{{ temp }}&deg</div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+          <h6 class="vreme-naslov">Vremenska prognoza</h6>
+            <hr class="razdelnik">
+
+        <div class="carousel-item active">
+
+            <h3 class="vreme-naslov">Prnjavor</h3>
+            <hr class="razdelnik">
+          <div class="slika-temp">
+            <div class="slika">
+                <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>
+                <div>{{ opis }}</div>
+            </div>
+            <div class="temp">
+                <div class="tren">{{ temp }}&deg</div>
+
+            </div>
+        </div>
+
+        </div>
+        <div class="carousel-item">
+            <h3 class="vreme-naslov">Banja Luka</h3>
+            <hr class="razdelnik">
+          <div class="slika-temp">
+            <div class="slika">
+                <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>
+                <div>{{ opis }}</div>
+            </div>
+            <div class="temp">
+                <div class="tren">{{ temp }}&deg</div>
+
+            </div>
+        </div>
+
+        </div>
+        <div class="carousel-item">
+
+            <h3 class="vreme-naslov">Beograd</h3>
+            <hr class="razdelnik">
+          <div class="slika-temp">
+            <div class="slika">
+                <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>
+                <div>{{ opis }}</div>
+            </div>
+            <div class="temp">
+                <div class="tren">{{ temp }}&deg</div>
+
+            </div>
+        </div>
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+
+
+
+<!--    <h4 class="vreme-naslov">Vreme</h4>-->
+<!--    <div class="card vreme" style="width: 18rem;">-->
+<!--        <div class="card-header">-->
+<!--        Prnjavor-->
+<!--        </div>-->
+<!--        <ul class="list-group list-group-flush">-->
+<!--            <li class="list-group-item">Trenutna temperatura: {{ temp }}&deg </li>-->
+<!--            <li class="list-group-item">Subjektivni osecaj: {{ feels_like}}&deg</li>-->
+<!--            <li class="list-group-item">{{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></li>-->
+<!--            <li class="list-group-item">Brzina vetra: {{ vetar }} m/s</li>-->
+<!--            <li class="list-group-item">Vlaznost vazduha: {{ vlaznost }}%</li>-->
+<!--            <li class="list-group-item">Sunce izlazi: {{ izlazak_sunca }}h</li>-->
+<!--            <li class="list-group-item">Sunce zalazi: {{ zalazak_sunca }}h</li>-->
+<!--        </ul>-->
+<!--    </div>-->
 
 <!--  <h3>Prnjavor</h3>-->
 
