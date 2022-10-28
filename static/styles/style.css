@@ -19,3 +19,14 @@ nav {
 footer {
     background-color: var(--bs-cyan)
 }
+
+.vreme-slika {
+    width: 36px;
+}
+.vreme-naslov {
+    text-align: center;
+    margin-top: 20px;
+}
+.vreme {
+    margin: 20px auto;
+}

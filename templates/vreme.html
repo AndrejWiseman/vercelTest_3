@@ -1,20 +1,33 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-  <h1>Vreme</h1>
+    <h3 class="vreme-naslov">Vreme</h3>
+    <div class="card vreme" style="width: 18rem;">
+        <div class="card-header">
+        Prnjavor
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Trenutna temperatura: {{ temp }}&#8451 </li>
+            <li class="list-group-item">Subjektivni osecaj: {{ feels_like}}&#8451</li>
+            <li class="list-group-item">{{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></li>
+            <li class="list-group-item">Brzina vetra: {{ vetar }} m/s</li>
+            <li class="list-group-item">Vlaznost vazduha: {{ vlaznost }}%</li>
+            <li class="list-group-item">Sunce izlazi: {{ izlazak_sunca }}h</li>
+            <li class="list-group-item">Sunce zalazi: {{ zalazak_sunca }}h</li>
 
-  <h3>Prnjavor</h3>
+        </ul>
+    </div>
 
-  <h3>Trenutna temperatura: {{ temp }}&#8451 </h3>
-  <h3>Subjektivni osecaj: {{ feels_like}}&#8451 </h3>
-  <h3> {{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme">
- </h3>
-  <h3>Brzina vetra: {{ vetar }} m/s</h3>
-  <h3>Vlaznost vazduha: {{ vlaznost }}%</h3>
-  <h3>Sunce izlazi: {{ izlazak_sunca }}h </h3>
-  <h3>Sunce zalazi: {{ zalazak_sunca }}h </h3>
+<!--  <h3>Prnjavor</h3>-->
 
-
+<!--  <h3>Trenutna temperatura: {{ temp }}&#8451 </h3>-->
+<!--  <h3>Subjektivni osecaj: {{ feels_like}}&#8451 </h3>-->
+<!--  <h3> {{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme">-->
+<!-- </h3>-->
+<!--  <h3>Brzina vetra: {{ vetar }} m/s</h3>-->
+<!--  <h3>Vlaznost vazduha: {{ vlaznost }}%</h3>-->
+<!--  <h3>Sunce izlazi: {{ izlazak_sunca }}h </h3>-->
+<!--  <h3>Sunce zalazi: {{ zalazak_sunca }}h </h3>-->
 
 
 {% endblock %}

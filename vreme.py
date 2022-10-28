@@ -1,12 +1,12 @@
 import requests
-from flask import  render_template
+from flask import render_template
 import time
+
 
 def prognoza():
     api_key = '648f71380344c14f8d30afd84d40cf00'
 
     grad = 'Prnjavor'
-
 
     url = f'https://api.openweathermap.org/data/2.5/weather?q={grad}&appid={api_key}&units=metric&lang=sr'
 
@@ -27,16 +27,3 @@ def prognoza():
 
     return render_template('vreme.html', temp=temp, feels_like=feels_like, vlaznost=vlaznost, vetar=vetar, icon=icon,
                            opis=opis, izlazak_sunca=izlazak_sunca, zalazak_sunca=zalazak_sunca)
-
-# print(response)
-
-
-
-
-
-
-
-
-
-
-
