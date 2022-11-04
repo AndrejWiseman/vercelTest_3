@@ -32,8 +32,8 @@ def prognoza():
     danas_min = round(temp_min[0])
     danas_code = vrem_kodovi[0]
     danas_vetar = round(brz_vetra[0])
-    danas_izlazak = datetime.fromtimestamp(izlasci[0])
-    danas_zalazak = datetime.fromtimestamp(zalasci[0])
+    danas_izlazak = datetime.fromtimestamp(izlasci[0]) + timedelta(hours=1)
+    danas_zalazak = datetime.fromtimestamp(zalasci[0]) + timedelta(hours=1)
     izlazak_sunca = danas_izlazak.strftime(" %H:%M")
     zalazak_sunca = danas_zalazak.strftime(" %H:%M")
 
@@ -181,8 +181,8 @@ def prognoza():
     danas_minbl = round(temp_minbl[0])
     danas_codebl = vrem_kodovibl[0]
     danas_vetarbl = round(brz_vetrabl[0])
-    danas_izlazakbl = datetime.fromtimestamp(izlascibl[0])
-    danas_zalazakbl = datetime.fromtimestamp(zalascibl[0])
+    danas_izlazakbl = datetime.fromtimestamp(izlascibl[0]) + timedelta(hours=1)
+    danas_zalazakbl = datetime.fromtimestamp(zalascibl[0]) + timedelta(hours=1)
     izlazak_suncabl = danas_izlazakbl.strftime(" %H:%M")
     zalazak_suncabl = danas_zalazakbl.strftime(" %H:%M")
 
@@ -328,8 +328,8 @@ def prognoza():
     danas_minsg = round(temp_minsg[0])
     danas_codesg = vrem_kodovisg[0]
     danas_vetarsg = round(brz_vetrasg[0])
-    danas_izlazaksg = datetime.fromtimestamp(izlascisg[0])
-    danas_zalazaksg = datetime.fromtimestamp(zalascisg[0])
+    danas_izlazaksg = datetime.fromtimestamp(izlascisg[0]) + timedelta(hours=1)
+    danas_zalazaksg = datetime.fromtimestamp(zalascisg[0]) + timedelta(hours=1)
     izlazak_suncasg = danas_izlazaksg.strftime(" %H:%M")
     zalazak_suncasg = danas_zalazaksg.strftime(" %H:%M")
 
@@ -349,28 +349,6 @@ def prognoza():
     za_tri_dana_minsg = round(temp_minsg[4])
     za_tri_dana_codesg = vrem_kodovisg[4]
 
-    # timestampsg = danisg[0]
-    # strsg = danisg[1]
-    # prstsg = dani[2]
-    # dt_objsg = datetime.fromtimestamp(timestampsg).strftime('%d.%m.%y')
-    # str1sg = datetime.fromtimestamp(strsg).strftime('%d.%m.%y')
-    # prst1sg = datetime.fromtimestamp(prstsg).strftime('%d.%m.%y')
-    # dsg = datetime.now()
-    # dasg = dsg.weekday()
-    # dnisg = ['Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota', 'Nedelja']
-    # s1sg = d + timedelta(days=1)
-    # ps1 = d + timedelta(days=2)
-    # pps1 = d + timedelta(days=3)
-    # ppps1 = d + timedelta(days=4)
-    # s11 = s1.weekday()
-    # ps11 = ps1.weekday()
-    # pps11 = pps1.weekday()
-    # ppps11 = ppps1.weekday()
-    # danas1 = dni[da]
-    # sutra1 = dni[s11]
-    # prekosutra1 = dni[ps11]
-    # dva_dana1 = dni[pps11]
-    # tri_dana1 = dni[ppps11]
 
     opissg = ''
     if trenutni_codesg == 0:

@@ -27,6 +27,8 @@ danas_zalazak = datetime.fromtimestamp(zalasci[0])
 izlazak_sunca = danas_izlazak.strftime(" %H:%M")
 zalazak_sunca = danas_zalazak.strftime(" %H:%M")
 
+print(izlazak_sunca)
+
 sutra_max = round(temp_max[1])
 sutra_min = round(temp_min[1])
 sutra_code = vrem_kodovi[1]
