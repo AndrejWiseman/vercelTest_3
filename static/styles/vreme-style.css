@@ -1,0 +1,87 @@
+
+.vreme-slika {
+    width: 60px;
+}
+.vreme-naslov {
+    text-align: center;
+    margin-top: 5px;
+}
+.vreme {
+    /*margin: 20px auto;*/
+}
+
+.temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tren1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.tren2 {
+    font-size: 0.8rem;
+}
+.tren3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.8rem;
+}
+.kv {
+    font-weight: bold;
+}
+.slika {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slika-temp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.opis {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+.slicice {
+    height: 50px;
+}
+
+.ostali-dani {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.da-sl {
+    /*font-weight: bold;*/
+}
+.da-tmp {
+    font-size: 1rem;
+    /*font-weight: bold;*/
+
+}
+
+.carousel {
+    height: 82vh;
+}
+
+.razdelnik {
+    border:none;
+    height: 20px;
+    width: 90%;
+    height: 50px;
+    margin-top: 0;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: 0 20px 20px -20px #333;
+    margin: -50px auto 10px;
+}

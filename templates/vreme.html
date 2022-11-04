@@ -2,72 +2,167 @@
 
 {% block content %}
 
-
-
-<!--    <div class="slika-temp">-->
-<!--        <div class="slika">-->
-<!--            <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>-->
-<!--            <div>{{ opis }}</div>-->
-<!--        </div>-->
-<!--        <div class="temp">-->
-<!--            <div class="tren">{{ temp }}&deg</div>-->
-
-<!--        </div>-->
-<!--    </div>-->
-
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<!--    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">-->
+    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
 
       <div class="carousel-inner">
           <h6 class="vreme-naslov">Vremenska prognoza</h6>
             <hr class="razdelnik">
 
         <div class="carousel-item active">
-
             <h3 class="vreme-naslov">Prnjavor</h3>
             <hr class="razdelnik">
-          <div class="slika-temp">
-            <div class="slika">
-                <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>
-                <div>{{ opis }}</div>
+            <div class="slika-temp">
+                <div class="slika">
+<!--                    <div><img src="https://www.politika.rs/themed/politika/img/weather/{{icon_code}}.png" alt="vreme" class="su-slika slicice"></div>-->
+                    <div><img src="static/img/weather-icons/{{trenutni_code}}.png" alt="vreme" class="su-slika slicice"></div>
+                    <div class="opis">{{ opis }}</div>
+                </div>
+                <div class="temp">
+                    <div class="tren1">{{ trenutna_temp }}&deg</div>
+                    <div class="tren2">
+                        <p class="vet-vl">{{ danas_vetar }}km/h / {{ tr_vlaznost }}%</p>
+                    </div>
+                </div>
             </div>
-            <div class="temp">
-                <div class="tren">{{ temp }}&deg</div>
-
+            <hr class="razdelnik">
+            <div class="ostali-dani">
+                <div class="su">
+                    <div class="da-sl">Sutra</div>
+                    <div>
+                        <img src="static/img/weather-icons/{{sutra_code}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ sutra_max }}&deg / {{ sutra_min }}&deg</div>
+                </div>
+                <div class="psu">
+                    <div class="da-sl">{{ prekosutra1 }}</div>
+                    <div><img src="static/img/weather-icons/{{prekosutra_code}}.png" alt="vreme" class="su-slika slicice"></div>
+                    <div class="da-tmp">{{ prekosutra_max }}&deg / {{ prekosutra_min }}&deg</div>
+                </div>
+                <div class="dvad">
+                    <div class="da-sl">{{ dva_dana1 }}</div>
+                    <div><img src="static/img/weather-icons/{{za_dva_dana_code}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ za_dva_dana_max }}&deg / {{ za_dva_dana_min }}&deg</div>
+                </div>
+                <div class="trid">
+                    <div class="da-sl">{{ tri_dana1 }}</div>
+                    <div><img src="static/img/weather-icons/{{za_tri_dana_code}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ za_tri_dana_max }}&deg / {{ za_tri_dana_min }}&deg</div>
+                </div>
+            </div>
+            <hr class="razdelnik">
+            <div class="tren3">
+                <p class="sun-sr"><img src="{{url_for('static', filename='img/weather-icons/sunrise.png')}}" alt="izlazak">{{izlazak_sunca}}<img src="{{url_for('static', filename='img/weather-icons/sunset.png')}}" alt="zalazak">{{zalazak_sunca}}</p>
+                <p class="kv-vazd">Kvalitet vazduha: <span class="kv">{{kvalitet_vazduha}}</span></p>
             </div>
         </div>
 
-        </div>
         <div class="carousel-item">
             <h3 class="vreme-naslov">Banja Luka</h3>
             <hr class="razdelnik">
-          <div class="slika-temp">
-            <div class="slika">
-                <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>
-                <div>{{ opis }}</div>
+            <div class="slika-temp">
+                <div class="slika">
+<!--                    <div><img src="https://www.politika.rs/themed/politika/img/weather/{{icon_code}}.png" alt="vreme" class="su-slika slicice"></div>-->
+                    <div><img src="static/img/weather-icons/{{trenutni_codebl}}.png" alt="vreme" class="su-slika slicice"></div>
+                    <div class="opis">{{ opisbl }}</div>
+                </div>
+                <div class="temp">
+                    <div class="tren1">{{ trenutna_tempbl }}&deg</div>
+                    <div class="tren2">
+                        <p class="vet-vl">{{ danas_vetarbl }}km/h / {{ tr_vlaznostbl }}%</p>
+                    </div>
+                </div>
             </div>
-            <div class="temp">
-                <div class="tren">{{ temp }}&deg</div>
-
-            </div>
-        </div>
-
-        </div>
-        <div class="carousel-item">
-
-            <h3 class="vreme-naslov">Beograd</h3>
             <hr class="razdelnik">
-          <div class="slika-temp">
-            <div class="slika">
-                <div><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></div>
-                <div>{{ opis }}</div>
+            <div class="ostali-dani">
+                <div class="su">
+                    <div class="da-sl">Sutra</div>
+                    <div>
+                        <img src="static/img/weather-icons/{{sutra_codebl}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ sutra_maxbl }}&deg / {{ sutra_minbl }}&deg</div>
+                </div>
+                <div class="psu">
+                    <div class="da-sl">{{ prekosutra1bl }}</div>
+                    <div><img src="static/img/weather-icons/{{prekosutra_codebl}}.png" alt="vreme" class="su-slika slicice"></div>
+                    <div class="da-tmp">{{ prekosutra_maxbl }}&deg / {{ prekosutra_minbl }}&deg</div>
+                </div>
+                <div class="dvad">
+                    <div class="da-sl">{{ dva_dana1bl }}</div>
+                    <div><img src="static/img/weather-icons/{{za_dva_dana_codebl}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ za_dva_dana_maxbl }}&deg / {{ za_dva_dana_minbl }}&deg</div>
+                </div>
+                <div class="trid">
+                    <div class="da-sl">{{ tri_dana1bl }}</div>
+                    <div><img src="static/img/weather-icons/{{za_tri_dana_codebl}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ za_tri_dana_maxbl }}&deg / {{ za_tri_dana_minbl }}&deg</div>
+                </div>
             </div>
-            <div class="temp">
-                <div class="tren">{{ temp }}&deg</div>
-
+            <hr class="razdelnik">
+            <div class="tren3">
+                <p class="sun-sr"><img src="{{url_for('static', filename='img/weather-icons/sunrise.png')}}" alt="izlazak">{{izlazak_suncabl}}<img src="{{url_for('static', filename='img/weather-icons/sunset.png')}}" alt="zalazak">{{zalazak_suncabl}}</p>
+                <p class="kv-vazd">Kvalitet vazduha: <span class="kv">{{kvalitet_vazduhabl}}</span></p>
             </div>
         </div>
 
+
+          <div class="carousel-item">
+            <h3 class="vreme-naslov">Sankt Gallen</h3>
+            <hr class="razdelnik">
+            <div class="slika-temp">
+                <div class="slika">
+<!--                    <div><img src="https://www.politika.rs/themed/politika/img/weather/{{icon_code}}.png" alt="vreme" class="su-slika slicice"></div>-->
+                    <div><img src="static/img/weather-icons/{{trenutni_codebl}}.png" alt="vreme" class="su-slika slicice"></div>
+                    <div class="opis">{{ opissg }}</div>
+                </div>
+                <div class="temp">
+                    <div class="tren1">{{ trenutna_tempsg }}&deg</div>
+                    <div class="tren2">
+                        <p class="vet-vl">{{ danas_vetarsg }}km/h / {{ tr_vlaznostsg }}%</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="razdelnik">
+            <div class="ostali-dani">
+                <div class="su">
+                    <div class="da-sl">Sutra</div>
+                    <div>
+                        <img src="static/img/weather-icons/{{sutra_codesg}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ sutra_maxsg }}&deg / {{ sutra_minsg }}&deg</div>
+                </div>
+                <div class="psu">
+                    <div class="da-sl">{{ prekosutra1 }}</div>
+                    <div><img src="static/img/weather-icons/{{prekosutra_codesg}}.png" alt="vreme" class="su-slika slicice"></div>
+                    <div class="da-tmp">{{ prekosutra_maxsg }}&deg / {{ prekosutra_minsg }}&deg</div>
+                </div>
+                <div class="dvad">
+                    <div class="da-sl">{{ dva_dana1bl }}</div>
+                    <div><img src="static/img/weather-icons/{{za_dva_dana_codesg}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ za_dva_dana_maxsg }}&deg / {{ za_dva_dana_minsg }}&deg</div>
+                </div>
+                <div class="trid">
+                    <div class="da-sl">{{ tri_dana1 }}</div>
+                    <div><img src="static/img/weather-icons/{{za_tri_dana_codesg}}.png" alt="vreme" class="su-slika slicice">
+                    </div>
+                    <div class="da-tmp">{{ za_tri_dana_maxsg }}&deg / {{ za_tri_dana_minsg }}&deg</div>
+                </div>
+            </div>
+            <hr class="razdelnik">
+            <div class="tren3">
+                <p class="sun-sr"><img src="{{url_for('static', filename='img/weather-icons/sunrise.png')}}" alt="izlazak">{{izlazak_suncasg}}<img src="{{url_for('static', filename='img/weather-icons/sunset.png')}}" alt="zalazak">{{zalazak_suncasg}}</p>
+                <p class="kv-vazd">Kvalitet vazduha: <span class="kv">{{kvalitet_vazduha}}</span></p>
+            </div>
         </div>
+
+
+
+
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -78,35 +173,4 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
-
-<!--    <h4 class="vreme-naslov">Vreme</h4>-->
-<!--    <div class="card vreme" style="width: 18rem;">-->
-<!--        <div class="card-header">-->
-<!--        Prnjavor-->
-<!--        </div>-->
-<!--        <ul class="list-group list-group-flush">-->
-<!--            <li class="list-group-item">Trenutna temperatura: {{ temp }}&deg </li>-->
-<!--            <li class="list-group-item">Subjektivni osecaj: {{ feels_like}}&deg</li>-->
-<!--            <li class="list-group-item">{{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme" class="vreme-slika"></li>-->
-<!--            <li class="list-group-item">Brzina vetra: {{ vetar }} m/s</li>-->
-<!--            <li class="list-group-item">Vlaznost vazduha: {{ vlaznost }}%</li>-->
-<!--            <li class="list-group-item">Sunce izlazi: {{ izlazak_sunca }}h</li>-->
-<!--            <li class="list-group-item">Sunce zalazi: {{ zalazak_sunca }}h</li>-->
-<!--        </ul>-->
-<!--    </div>-->
-
-<!--  <h3>Prnjavor</h3>-->
-
-<!--  <h3>Trenutna temperatura: {{ temp }}&#8451 </h3>-->
-<!--  <h3>Subjektivni osecaj: {{ feels_like}}&#8451 </h3>-->
-<!--  <h3> {{ opis }} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="vreme">-->
-<!-- </h3>-->
-<!--  <h3>Brzina vetra: {{ vetar }} m/s</h3>-->
-<!--  <h3>Vlaznost vazduha: {{ vlaznost }}%</h3>-->
-<!--  <h3>Sunce izlazi: {{ izlazak_sunca }}h </h3>-->
-<!--  <h3>Sunce zalazi: {{ zalazak_sunca }}h </h3>-->
-
-
 {% endblock %}
