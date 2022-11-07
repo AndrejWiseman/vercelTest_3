@@ -16,9 +16,9 @@ def home():
 def vreme():
     return prognoza()
 
-@app.route('/vicevi')
-def vic():
-    return vic_random()
+# @app.route('/vicevi')
+# def vic():
+#     return vic_random()
 
 
 if __name__ == '__main__':
