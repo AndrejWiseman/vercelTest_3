@@ -1,7 +1,7 @@
   <nav class="navbar navbar-dark " aria-label="Dark offcanvas navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{url_for('home')}}">Test stranica</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-toggle="modal" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end text-bg-primary" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
@@ -16,6 +16,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url_for('vreme')}}">Vreme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('vic')}}">Vic dana</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

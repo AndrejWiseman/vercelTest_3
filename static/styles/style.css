@@ -19,8 +19,20 @@ footer {
     background-color: var(--bs-cyan)
 }
 
+.nav-link {
+    font-size: 1.1rem;
+}
+.vicdugme {
+    margin: 20px auto;
+    background-color: #d0d0d0;
+    color: black;
+    border: none;
+}
+.mod-box1 {
+    display: flex;
+    justify-content: space-around;
 
-
+}
 
 
 
